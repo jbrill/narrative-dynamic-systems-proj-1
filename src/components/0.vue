@@ -1,0 +1,35 @@
+<template>
+  <v-container>
+    <Video
+      :questions="[
+        {
+          'text': 'Join Accounting Club',
+          'link': '1',
+          'lullabyLine': 'No need to move in haste',
+        },
+        {
+          'text': 'Join School Choir',
+          'link': '2',
+          'lullabyLine': 'Sing till the birds chirp on the trees',
+        },
+        {
+          'text': 'Join the high school play as a tree',
+          'link': '3',
+          'lullabyLine': 'Together we can achieve our goals',
+        }
+      ]"
+    />
+  </v-container>
+</template>
+
+<script>
+import Video from './Video';
+
+export default {
+  components: {
+    Video,
+  },
+  data: () => ({
+  }),
+}
+</script>
