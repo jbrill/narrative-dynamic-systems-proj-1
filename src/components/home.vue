@@ -19,7 +19,6 @@
         }
       ]"
     />
-  </div>
   </v-container>
 </template>
 

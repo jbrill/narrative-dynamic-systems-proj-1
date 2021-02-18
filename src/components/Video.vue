@@ -1,19 +1,22 @@
 <template>
   <v-container>
-    <!-- <youtube v-if="!ended" @ready="setPlaybackRate" @ended="toggleSound" :video-id="videoId" :player-vars="{ autoplay: 1, controls: 0, showinfo: 0, frameBorder: 0, allowFullscreen: 0, modestbranding: 1, rel: 0, playbackRate: 3 }"></youtube> -->
-    <div class="video-contain">
-      <h2>Choose from below:</h2>
-      <v-flex>
-        <v-btn
-          v-for="(question, questionIdx) in questions"
-          :key="'question-' + questionIdx"
-          color="yellow"
-          outlined
-          @click="addLullabyLines(question.lullabyLine, question.link)"
-          
-        >{{ question.text }}</v-btn>
-      </v-flex>
-    </div>
+    <transition name="fade">
+      <div class="video-contain">
+        <!-- <h2 class="heading-2">What</h2> -->
+        <v-flex>
+          <v-btn
+            v-for="(question, questionIdx) in questions"
+            :key="'question-' + questionIdx"
+            color="yellow"
+            margin="5px"
+            outlined
+            block
+            @click="addLullabyLines(question.lullabyLine, question.link)"
+            
+          >{{ question.text }}</v-btn>
+        </v-flex>
+      </div>
+    </transition>
   </v-container>
 </template>
 
@@ -42,5 +45,11 @@ export default {
 }
 .h2 {
   padding-bottom: 2rem;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

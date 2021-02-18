@@ -1,5 +1,9 @@
 <template>
   <v-container>
+    <v-container>
+      <span class="title yellow--text">Scene 5</span>
+      <p class="white--text">In order to make it as an actor, I feel like I need to save up some cash. Besides, I need enought to move to Los Angeles.</p>
+    </v-container>
     <Video
       :questions="[
         {

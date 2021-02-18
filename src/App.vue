@@ -7,13 +7,13 @@
     >
       <div class="d-flex align-center">
         <v-flex>
-        <h2><a style="color: white; text-decoration: none" href="/">Piercing Lullaby</a></h2>
-        <h6 class="grey--text">A cultural binaural lullaby that is visceral and piercing about finance for actors.</h6>
+          <h2><a style="color: white; text-decoration: none" href="/">Piercing Lullaby</a></h2>
+          <h6 class="grey--text">A cultural binaural lullaby that is visceral and piercing about finance for actors.</h6>
         </v-flex>
       </div>
 
       <v-spacer></v-spacer>
-      <v-btn href="https://www.youtube.com/watch?v=G52dUQLxPzg" target="_blank">Take me away</v-btn>
+      <v-btn to="/">Restart</v-btn>
     </v-app-bar>
 
     <v-main flex align-items-center justify='center'>
@@ -22,12 +22,14 @@
           no-gutters
           class="flex-column align-center"
         >
-          <span class="title yellow--text">Lullaby</span>
-          <v-col class="d-flex justify-center" v-for="(lullabyLine, lullabyLineIdx) in lullabyLines"
-            :key="'lullaby-line-' + lullabyLineIdx"
-          >
-            <span class="body-1">{{ lullabyLine }}</span>
-          </v-col>
+          <v-container>
+            <span class="title yellow--text">Lullaby</span>
+            <v-col class="d-flex justify-center" v-for="(lullabyLine, lullabyLineIdx) in lullabyLines"
+              :key="'lullaby-line-' + lullabyLineIdx"
+            >
+              <span class="body-1">{{ lullabyLine }}</span>
+            </v-col>
+          </v-container>
         </v-row>
       </v-container>
       <!-- route outlet -->
