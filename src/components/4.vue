@@ -5,7 +5,7 @@
       <p class="white--text">Rolling out of bed, I walk to the mailbox to check the mail. It's a thick envelope, addressed from Juilliard -- my dream school!</p>
       <p class="white--text">I can't believe I got into Juilliard.</p>
       <p class="white--text">I can't believe I got into Juilliard.</p>
-      <p class="white--text">I'm going to be an actor</p>
+      <p class="white--text">I'm going to be an actor!</p>
     </v-container>
     <Video
       :questions="[
