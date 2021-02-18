@@ -30,6 +30,8 @@
               <span class="body-1">{{ lullabyLine }}</span>
             </v-col>
           </v-container>
+          <v-btn text class="yellow--text" @click="downloadLullaby">Save Lullaby</v-btn>
+          <v-btn text target="_blank" href="https://colab.research.google.com/drive/1S8ZWVqlKhqrJlOsM__L56b2fT2t30ibv" class="black--text">Generate Lullaby</v-btn>
         </v-row>
       </v-container>
       <!-- route outlet -->
@@ -41,6 +43,7 @@
 
 <script>
 import { mapState } from 'vuex';
+import FileSaver from 'file-saver';
 
 
 export default {
@@ -58,6 +61,12 @@ export default {
   //     'On the way to reach my dreams', 'How I wonder what stardom holds'
   //   ]
   // }),
+  methods: {
+    downloadLullaby () {
+      let blob = new Blob(this.lullabyLines, {type: "text/plain;charset=utf-8"});
+      FileSaver.saveAs(blob, "lullaby.txt");
+    }
+  },
   created () {
     const title = 'Piercing Lullaby'
     if (title) {

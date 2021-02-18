@@ -1,5 +1,9 @@
 <template>
   <v-container>
+    <v-container>
+      <span class="title yellow--text">Scene 6</span>
+      <p class="white--text">Ready to start my career, I think it's time to head West.</p>
+    </v-container>
     <Video
       :questions="[
         {
